@@ -1,5 +1,5 @@
 {% set name = "reprexlite" %}
-{% set version = "0.4.3" %}
+{% set version = "0.5.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/reprexlite-{{ version }}.tar.gz
-  sha256: 7724b6ac19f356d2eb82158a9068241328577b4d61022d4f60fbbe6b6e2a2c23
+  sha256: 3e8968f23619df1289c0d66bc200c0c79e577d199caf6205645cfc9dc4749de2
 
 build:
   number: 0
