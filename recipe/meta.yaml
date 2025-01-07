@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/reprexlite-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/reprexlite-{{ version }}.tar.gz
   sha256: 3e8968f23619df1289c0d66bc200c0c79e577d199caf6205645cfc9dc4749de2
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - reprex=reprexlite.cli:app
@@ -20,11 +20,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - importlib-metadata
     - libcst
-    - python >=3.6
+    - python >={{ python_min }}
     - typer
 
 test:
@@ -35,6 +35,7 @@ test:
     - reprex --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jayqi/reprexlite
