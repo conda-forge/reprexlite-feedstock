@@ -21,7 +21,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - flit_core
+    - flit-core
   run:
     - cyclopts >=3
     - libcst
