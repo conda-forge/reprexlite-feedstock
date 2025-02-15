@@ -20,12 +20,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
+    - flit_core
   run:
-    - importlib-metadata
+    - cyclopts >=3
     - libcst
-    - python >=3.6
-    - typer
+    - platformdirs
+    - python >= {{ python_min }}
+    - typing-extensions
 
 test:
   imports:
@@ -35,6 +37,7 @@ test:
     - reprex --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jayqi/reprexlite
